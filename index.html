@@ -1,88 +1,198 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Kavita Shah | Salesforce AI Portfolio</title>
+<meta name="description" content="Kavita Shah, Senior Salesforce Administrator and Business Analyst focused on Agentforce and Data Cloud. AIML-500 portfolio.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#13233f;--text:#2c3343;--muted:#5f6878;--accent:#d9822b;--blue:#2f6db5;--bg:#f7f5f0;--card:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.55}
-header{background:var(--ink);color:#fff;padding:18px 24px;position:sticky;top:0;z-index:5}
-header .in{max-width:1080px;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-header b{font-size:18px}nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:15px;opacity:.9}nav a:hover{opacity:1;text-decoration:underline}
-main{max-width:1080px;margin:auto;padding:0 24px 60px}
-.hero{padding:56px 0 30px}.hero h1{font-size:42px;color:var(--ink);margin:0 0 8px}
-.hero .role{font-size:19px;color:var(--muted);margin:0 0 22px}
-.pvp{background:var(--card);border-left:6px solid var(--accent);padding:18px 22px;border-radius:10px;font-size:19px;color:var(--ink)}
-h2{font-size:28px;color:var(--ink);margin:48px 0 14px;border-bottom:2px solid #ddd6c6;padding-bottom:6px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:var(--card);border-radius:10px;padding:18px 20px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
-.card h3{margin:0 0 6px;color:var(--ink);font-size:18px}
-.artifact{background:var(--card);border-radius:12px;padding:26px;box-shadow:0 1px 3px rgba(0,0,0,.07)}
-.tag{display:inline-block;background:#e8eef7;color:var(--blue);font-weight:600;font-size:13px;padding:3px 10px;border-radius:12px;margin-bottom:10px}
-.artifact h3{font-size:24px;color:var(--ink);margin:0 0 6px}
-.fig{margin:18px 0;border:1px solid #ddd6c6;border-radius:8px;overflow:hidden;background:#f6f3ec}
+:root{--navy:#032d60;--navy2:#0b1f44;--blue:#0176d3;--sky:#1b96ff;--cyan:#90d0fe;--ice:#eaf5fe;--teal:#06a59a;--ink:#181818;--text:#3e4a5c;--muted:#6b7a90;--line:#dbe4ef;--white:#fff;--violet:#7f5bd6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Plus Jakarta Sans","Segoe UI",Arial,sans-serif;color:var(--text);background:#f4f8fc;line-height:1.6}
+a{color:var(--blue)}
+/* nav */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(3,45,96,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav .in{max-width:1140px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;text-decoration:none;letter-spacing:.2px}
+.mono{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--sky),var(--teal));display:grid;place-items:center;font-size:14px;color:#fff}
+.nav nav a{color:#d6e9ff;text-decoration:none;font-weight:600;font-size:14.5px;margin-left:22px}
+.nav nav a:hover{color:#fff}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:150px 24px 120px;background:radial-gradient(1200px 500px at 85% -10%,rgba(27,150,255,.55),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(6,165,154,.35),transparent 60%),linear-gradient(160deg,var(--navy2),var(--navy) 55%,#014486)}
+.hero .in{max-width:1140px;margin:auto;position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .9fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--cyan)}
+.dot{width:8px;height:8px;border-radius:50%;background:#45c65a;box-shadow:0 0 0 4px rgba(69,198,90,.25)}
+.hero h1{font-size:clamp(40px,6vw,64px);line-height:1.05;margin:18px 0 10px;font-weight:800;letter-spacing:-1px}
+.hero h1 span{background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .role{font-size:19px;color:#cfe6ff;margin:0 0 26px;font-weight:500}
+.vp{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--sky);border-radius:14px;padding:18px 22px;font-size:17px;color:#eaf4ff}
+.vp b{color:#fff}
+.cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.p{background:var(--sky);color:#fff;box-shadow:0 8px 24px rgba(27,150,255,.35)}
+.btn.g{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:18px}
+.stat b{display:block;font-size:34px;font-weight:800;color:#fff;line-height:1.1}
+.stat span{font-size:13.5px;color:#cfe6ff}
+.clouds{position:absolute;inset:auto 0 -2px 0;z-index:1;line-height:0}
+.clouds svg{width:100%;height:120px;display:block}
+/* sections */
+section{padding:84px 24px}
+.wrap{max-width:1140px;margin:auto}
+.kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:800}
+h2{font-size:clamp(28px,3.6vw,38px);color:var(--navy);margin:6px 0 18px;letter-spacing:-.5px;line-height:1.15}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:44px}
+.about p{font-size:16.5px;margin:0 0 14px}
+.edu{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.edu h3{margin:0 0 12px;color:var(--navy);font-size:17px}
+.edu li{margin:0 0 10px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.badge{background:var(--ice);color:var(--navy);border:1px solid #cde4fb;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.skill{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;transition:box-shadow .2s,transform .2s}
+.skill:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(3,45,96,.10)}
+.ic{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:14px}
+.ic svg{width:24px;height:24px}
+.skill h3{margin:0 0 8px;color:var(--navy);font-size:17px}
+.skill p{margin:0;font-size:14.5px}
+/* journey */
+.journey{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:30px}
+.steps:before{content:"";position:absolute;left:6%;right:6%;top:22px;height:3px;background:linear-gradient(90deg,var(--teal),var(--sky),var(--violet))}
+.st{text-align:center;padding:0 12px;position:relative}
+.st .n{width:46px;height:46px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;color:#fff;font-weight:800;background:var(--blue);border:4px solid #fff;box-shadow:0 0 0 2px var(--line)}
+.st:nth-child(1) .n{background:var(--teal)}.st:nth-child(4) .n{background:var(--violet)}
+.st b{display:block;color:var(--navy)}.st span{font-size:14px;color:var(--muted)}
+/* artifact */
+.art{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(3,45,96,.08)}
+.art-head{padding:30px 34px;background:linear-gradient(120deg,var(--ice),#fff 60%)}
+.tag{display:inline-block;background:var(--navy);color:#fff;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;letter-spacing:.04em}
+.art-head h3{font-size:26px;color:var(--navy);margin:12px 0 8px;line-height:1.25}
+.art-head p{margin:0;font-size:16px}
+.art-body{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;padding:30px 34px 34px}
+.fig{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#f6f3ec;max-height:640px;position:relative}
 .fig img{width:100%;display:block}
-.fig .cap{font-size:14px;color:var(--muted);padding:8px 12px;background:#fff}
-dl{display:grid;grid-template-columns:200px 1fr;gap:10px 18px;margin:18px 0 0}
-dt{font-weight:700;color:var(--ink)}dd{margin:0}
-.btn{display:inline-block;background:var(--ink);color:#fff;padding:9px 16px;border-radius:8px;text-decoration:none;font-weight:600;margin:6px 8px 0 0}
-.btn.alt{background:var(--accent)}
-.soon{opacity:.6}
-.refs p{font-size:14px;padding-left:22px;text-indent:-22px;margin:4px 0}
-footer{text-align:center;font-size:13px;color:var(--muted);padding:26px}
-@media(max-width:640px){dl{grid-template-columns:1fr}.hero h1{font-size:32px}nav a{margin:0 12px 0 0}}
+.fig:after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,#fff)}
+.fig-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.btn.s{background:var(--blue);color:#fff}.btn.o{border:1.5px solid var(--blue);color:var(--blue);background:#fff}
+.meta{display:grid;gap:14px}
+.m{border-left:3px solid var(--sky);padding:2px 0 2px 16px}
+.m h4{margin:0 0 3px;color:var(--navy);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.m p{margin:0;font-size:15px}
+.vpbox{background:linear-gradient(135deg,var(--navy),#014486);color:#eaf4ff;border-radius:14px;padding:18px 20px}
+.vpbox h4{color:var(--cyan);margin:0 0 6px;font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+.vpbox p{margin:0 0 8px;font-size:15px}.vpbox b{color:#fff}
+.refs{padding:0 34px 30px;font-size:13.5px;color:var(--muted)}
+.refs p{margin:4px 0;padding-left:22px;text-indent:-22px}
+.next{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.soon{border:2px dashed #c3d4e8;border-radius:16px;padding:18px;text-align:center;color:var(--muted);font-weight:600;background:rgba(255,255,255,.6)}
+.soon b{display:block;color:var(--navy)}
+/* contact */
+.contact{background:linear-gradient(160deg,var(--navy2),var(--navy));color:#fff;text-align:center}
+.contact h2{color:#fff}.contact p{color:#cfe6ff;max-width:640px;margin:0 auto 26px;font-size:17px}
+.cbtns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+footer{background:#021b3a;color:#8fb3da;text-align:center;font-size:13px;padding:22px}
+@media(max-width:900px){.hero .in,.about,.art-body{grid-template-columns:1fr}.skills,.next{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr;row-gap:26px}.steps:before{display:none}.nav nav a{margin-left:14px}}
+@media(max-width:560px){.skills,.next{grid-template-columns:1fr}.nav nav{display:none}.hero{padding-top:120px}}
 </style></head><body>
-<header><div class="in"><b>Kavita Shah</b><nav><a href="#about">About</a><a href="#artifacts">Artifacts</a><a href="#contact">Contact</a></nav></div></header>
-<main>
-<section class="hero">
-<h1>Kavita Shah</h1>
-<p class="role">Senior Salesforce Administrator &amp; Business Analyst · Agentforce · M.S. in Artificial Intelligence (in progress), Indiana Wesleyan University</p>
-<div class="pvp"><b>What I bring:</b> I help sales teams get real value from Salesforce AI. With five years in the Salesforce ecosystem and four more as a business analyst, I start with clean, trustworthy data and a clear business problem, then build the Agentforce agents, automation and dashboards that people actually use.</div>
-</section>
 
-<section id="about"><h2>About Me</h2>
+<div class="nav"><div class="in"><a class="brand" href="#top"><span class="mono">KS</span>Kavita Shah</a>
+<nav><a href="#about">About</a><a href="#journey">Journey</a><a href="#artifacts">Artifacts</a><a href="#contact">Contact</a></nav></div></div>
+
+<header class="hero" id="top"><div class="in">
+<div>
+<span class="eyebrow"><span class="dot"></span>Building with Agentforce · Open to Agentforce &amp; Data Cloud roles</span>
+<h1>Hi, I'm <span>Kavita Shah</span></h1>
+<p class="role">Senior Salesforce Administrator &amp; Business Analyst · M.S. in Artificial Intelligence (in progress), Indiana Wesleyan University</p>
+<div class="vp"><b>What I bring:</b> I help sales teams get real value from Salesforce AI. With five years in the Salesforce ecosystem and four more as a business analyst, I start with clean, trustworthy data and a clear business problem, then build the Agentforce agents, automation and dashboards that people actually use.</div>
+<div class="cta"><a class="btn p" href="#artifacts">View my work →</a><a class="btn g" href="https://www.linkedin.com/in/kavita-shah-b89a781b5" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<div class="stats">
+<div class="stat"><b>5 yrs</b><span>Salesforce administration &amp; BA on Sales Cloud</span></div>
+<div class="stat"><b>9 yrs</b><span>Total professional experience</span></div>
+<div class="stat"><b>3×</b><span>Dreamforce attendee</span></div>
+<div class="stat"><b>AI</b><span>Agentforce agents, Claude &amp; ChatGPT in daily work</span></div>
+</div>
+</div>
+<div class="clouds"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#f4f8fc" d="M0 70c60-30 120-30 180 0s120 30 180 0 120-40 200-10 140 40 220 5 140-45 220-10 150 35 230 5 150-30 210-10v80H0z"/><path fill="#f4f8fc" opacity=".5" d="M0 50c80-25 150-15 220 10s150 20 230-5 160-30 240 0 150 25 240 0 160-35 250-5 160 20 260 0v70H0z"/></svg></div>
+</header>
+
+<section id="about"><div class="wrap">
+<div class="kicker">About me</div>
+<h2>Data you can trust, AI people will use</h2>
+<div class="about">
+<div>
 <p>I'm a Senior Salesforce Administrator and Business Analyst at an e-commerce company, where I've worked for about five years. I started there as a Salesforce administrator and grew into a senior admin and BA role on Sales Cloud. Before Salesforce, I spent four years as a business analyst, which is where I learned to translate what the business says into what a system has to do.</p>
 <p>The work I'm proudest of is about data you can trust. I've worked through data-integrity problems with the business, cleaned and deduplicated records so only unique records were migrated and loaded, built KPI dashboards with business teams, and designed automation flows that removed manual steps from their day.</p>
-<p>Right now I'm building Salesforce agents with Agentforce and using Claude and ChatGPT in my daily work. I'm completing an M.S. in Artificial Intelligence at Indiana Wesleyan University. Over the next two to three years I want to focus on Agentforce and Data Cloud as a consultant and product owner, leading projects where AI agents run on well-governed customer data.</p>
-<div class="grid">
-<div class="card"><h3>Salesforce</h3>Sales Cloud administration, Agentforce agents, Flow automation, reports and KPI dashboards, Salesforce certified, Trailhead (approaching Ranger), 3× Dreamforce attendee</div>
-<div class="card"><h3>Data</h3>Data integrity analysis, deduplication, data migration and loading, data quality for AI</div>
-<div class="card"><h3>Business analysis</h3>Requirements gathering, process mapping, stakeholder workshops, user acceptance testing</div>
-<div class="card"><h3>Growing into</h3>Data Cloud, AI product ownership, machine learning fundamentals, generative AI tools (Claude, ChatGPT)</div>
+<p>Right now I'm building Salesforce agents with Agentforce and using Claude and ChatGPT in my daily work. Over the next two to three years I want to focus on <b>Agentforce and Data Cloud</b> as a consultant and product owner, leading projects where AI agents run on well-governed customer data.</p>
 </div>
-<p style="margin-top:14px"><b>Education:</b> M.S. in Artificial Intelligence, Indiana Wesleyan University (in progress) · PGDM in Computers · Bachelor's degree and diploma in management / business management studies</p>
-</section>
+<div class="edu"><h3>Education &amp; credentials</h3>
+<ul>
+<li><b>M.S. in Artificial Intelligence</b>, Indiana Wesleyan University (in progress)</li>
+<li><b>PGDM</b> in Computers</li>
+<li><b>Bachelor's degree &amp; diploma</b> in management / business management studies</li>
+<li>Salesforce certified · Trailhead: approaching Ranger</li>
+</ul>
+<div class="badges"><span class="badge">Sales Cloud</span><span class="badge">Agentforce</span><span class="badge">Flow</span><span class="badge">Reports &amp; Dashboards</span><span class="badge">Data Migration</span><span class="badge">Data Quality</span><span class="badge">Claude</span><span class="badge">ChatGPT</span></div>
+</div>
+</div>
+<div class="skills">
+<div class="skill"><div class="ic" style="background:#e5f2ff"><svg viewBox="0 0 24 24" fill="none" stroke="#0176d3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 1 1 .9-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8z"/></svg></div><h3>Salesforce</h3><p>Sales Cloud administration, Agentforce agents, Flow automation, reports and KPI dashboards.</p></div>
+<div class="skill"><div class="ic" style="background:#e3f7f5"><svg viewBox="0 0 24 24" fill="none" stroke="#06a59a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div><h3>Data</h3><p>Data-integrity analysis, deduplication, migration and loading, data quality for AI.</p></div>
+<div class="skill"><div class="ic" style="background:#fff3e2"><svg viewBox="0 0 24 24" fill="none" stroke="#dd7a01" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><h3>Business analysis</h3><p>Requirements, process mapping, stakeholder workshops, user acceptance testing.</p></div>
+<div class="skill"><div class="ic" style="background:#efeafc"><svg viewBox="0 0 24 24" fill="none" stroke="#7f5bd6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 5.6L20 10l-5.6 2.4L12 18l-2.4-5.6L4 10l5.6-2.4z"/></svg></div><h3>Growing into</h3><p>Data Cloud, AI product ownership, machine learning fundamentals, generative AI tools.</p></div>
+</div>
+</div></section>
 
-<section id="artifacts"><h2>Artifacts</h2>
-<article class="artifact">
-<span class="tag">Artifact 1 · AIML-500 Workshop 1</span>
+<section class="journey" id="journey"><div class="wrap">
+<div class="kicker">My path</div>
+<h2>From business analysis to Salesforce AI</h2>
+<div class="steps">
+<div class="st"><div class="n">1</div><b>Business Analyst</b><span>4 years translating business needs into system requirements</span></div>
+<div class="st"><div class="n">2</div><b>Salesforce Administrator</b><span>Sales Cloud, data quality, dashboards and flows</span></div>
+<div class="st"><div class="n">3</div><b>Senior Admin &amp; BA</b><span>Data migration, KPI reporting, Agentforce agents</span></div>
+<div class="st"><div class="n">4</div><b>Next: Agentforce &amp; Data Cloud</b><span>Consultant and product owner (M.S. in AI underway)</span></div>
+</div>
+</div></section>
+
+<section id="artifacts"><div class="wrap">
+<div class="kicker">Portfolio artifacts</div>
+<h2>Work from my M.S. in Artificial Intelligence</h2>
+<article class="art">
+<div class="art-head"><span class="tag">ARTIFACT 1 · AIML-500 WORKSHOP 1</span>
 <h3>From the Lab to the Sales Floor: An AI Timeline for Business-Systems Teams</h3>
-<p><b>Introduction.</b> A one-page visual history of AI and machine learning from 1950 to 2024 with a twist: a second lane shows when each research breakthrough actually reached the business software that sales and service teams use.</p>
-<div class="fig"><a href="timeline.png" target="_blank"><img src="timeline.png" alt="Vertical timeline of AI milestones from 1950 to 2024, with research milestones on the left, business-software milestones on the right, and the two AI winters shown as shaded bands"></a><div class="cap">Click to open full size. Research milestones in blue, business-tool milestones in orange, AI winters shaded.</div></div>
-<a class="btn" href="timeline.png" download>Download PNG</a><a class="btn alt" href="timeline.pdf" download>Download PDF</a>
-<dl>
-<dt>Description</dt><dd>Twenty dated milestones, each with the people or company involved and a source. It marks both AI winters (about 1974–1980 and 1987–1993) with their causes, and ends with a "lag" chart: about 24 years from the naming of AI to the first business expert system, about 4 years from AlexNet to machine learning scoring in a CRM, and about 3 months from ChatGPT to generative AI in a CRM.</dd>
-<dt>Objective</dt><dd>To understand how AI developed, and to give business-systems teams a quick way to explain why AI features now show up in their tools faster than their data and training plans can keep up.</dd>
-<dt>Process</dt><dd>I read the course sources (the IEEE Computer Society overview and the Our World in Data history), listed candidate milestones, and checked each date against an original paper or press release. I then split events into "lab" and "business" lanes, calculated the lag between matching pairs, and designed the layout so a manager could read it in two minutes.</dd>
-<dt>Tools and technologies</dt><dd>HTML/CSS layout rendered to PNG and PDF; Claude (Anthropic) to help research and verify dates, draft card text, and build the layout; original papers and press releases for verification.</dd>
-<dt>Value proposition</dt><dd><b>Unique value:</b> Most AI timelines stop at research milestones. This one connects them to the CRM and BI releases business teams actually live with. <b>Relevance:</b> A Salesforce admin, BI lead, or project manager can use the lag chart to argue for starting data cleanup and user training before the next AI feature arrives, not after.</dd>
-</dl>
+<p>A one-page visual history of AI and machine learning from 1950 to 2024 with a twist: a second lane shows when each research breakthrough actually reached the business software that sales and service teams use.</p></div>
+<div class="art-body">
+<div><div class="fig"><a href="timeline.png" target="_blank"><img src="timeline.png" alt="Vertical timeline of AI milestones from 1950 to 2024, with research milestones on the left, business-software milestones on the right, and the two AI winters shown as shaded bands"></a></div>
+<div class="fig-actions"><a class="btn s" href="timeline.png" target="_blank">Open full size</a><a class="btn o" href="timeline.pdf" download>Download PDF</a></div></div>
+<div class="meta">
+<div class="m"><h4>Description</h4><p>Twenty dated milestones, each with the people or company involved and a source. It marks both AI winters (about 1974–1980 and 1987–1993) with their causes, and ends with a "lag" chart: about 24 years from the naming of AI to the first business expert system, about 4 years from AlexNet to machine learning scoring in a CRM, and about 3 months from ChatGPT to generative AI in a CRM.</p></div>
+<div class="m"><h4>Objective</h4><p>To understand how AI developed, and to give business-systems teams a quick way to explain why AI features now show up in their tools faster than their data and training plans can keep up.</p></div>
+<div class="m"><h4>Process</h4><p>I read the course sources (the IEEE Computer Society overview and the Our World in Data history), listed candidate milestones, and checked each date against an original paper or press release. I then split events into "lab" and "business" lanes, calculated the lag between matching pairs, and designed the layout so a manager could read it in two minutes.</p></div>
+<div class="m"><h4>Tools &amp; technologies</h4><p>HTML/CSS layout rendered to PNG and PDF; Claude (Anthropic) to help research and verify dates, draft card text, and build the layout; original papers and press releases for verification.</p></div>
+<div class="vpbox"><h4>Value proposition</h4><p><b>Unique value:</b> Most AI timelines stop at research milestones. This one connects them to the CRM and BI releases business teams actually live with.</p><p style="margin:0"><b>Relevance:</b> A Salesforce admin, BI lead, or project manager can use the lag chart to argue for starting data cleanup and user training before the next AI feature arrives, not after.</p></div>
+</div></div>
 <div class="refs"><p><b>Key references</b></p>
 <p>Krizhevsky, A., Sutskever, I., &amp; Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. <i>Advances in Neural Information Processing Systems, 25</i>.</p>
 <p>Nilsson, N. J. (2010). <i>The quest for artificial intelligence</i>. Cambridge University Press.</p>
 <p>Roser, M. (2022). <i>The brief history of artificial intelligence</i>. Our World in Data. https://ourworldindata.org/brief-history-of-ai</p>
 <p>Salesforce. (2023, March 7). <i>Salesforce announces Einstein GPT, the world's first generative AI for CRM</i> [Press release].</p>
-<p>Full reference list is on the timeline itself.</p></div>
+<p>The full reference list is on the timeline itself.</p></div>
 </article>
-<div class="grid" style="margin-top:16px">
-<div class="card soon"><h3>Artifact 2</h3>Coming in Workshop 2</div>
-<div class="card soon"><h3>Artifact 3</h3>Coming in Workshop 3</div>
-<div class="card soon"><h3>Artifact 4</h3>Coming in Workshop 4</div>
-<div class="card soon"><h3>Artifact 5</h3>Coming in Workshop 6</div>
+<div class="next">
+<div class="soon"><b>Artifact 2</b>Coming in Workshop 2</div>
+<div class="soon"><b>Artifact 3</b>Coming in Workshop 3</div>
+<div class="soon"><b>Artifact 4</b>Coming in Workshop 4</div>
+<div class="soon"><b>Artifact 5</b>Coming in Workshop 6</div>
 </div>
-</section>
+</div></section>
 
-<section id="contact"><h2>Contact</h2>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/kavita-shah-b89a781b5" target="_blank" rel="noopener">linkedin.com/in/kavita-shah-b89a781b5</a> · Email: <a href="mailto:kavisfdc1225@gmail.com">kavisfdc1225@gmail.com</a></p>
-</section>
-</main>
+<section class="contact" id="contact"><div class="wrap">
+<div class="kicker" style="color:#90d0fe">Contact</div>
+<h2>Let's build trusted AI on Salesforce</h2>
+<p>I'm interested in Agentforce, Data Cloud and AI product-owner opportunities. Reach out any time.</p>
+<div class="cbtns"><a class="btn p" href="https://www.linkedin.com/in/kavita-shah-b89a781b5" target="_blank" rel="noopener">Connect on LinkedIn</a><a class="btn g" href="mailto:kavisfdc1225@gmail.com">kavisfdc1225@gmail.com</a></div>
+</div></section>
 <footer>© 2026 Kavita Shah · Built for AIML-500 at Indiana Wesleyan University. AI assistance (Claude) is noted on each artifact.</footer>
 </body></html>
