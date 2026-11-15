@@ -85,7 +85,7 @@ h2{font-size:clamp(28px,3.6vw,38px);color:var(--navy);margin:6px 0 18px;letter-s
 .vpbox p{margin:0 0 8px;font-size:15px}.vpbox b{color:#fff}
 .refs{padding:0 34px 30px;font-size:13.5px;color:var(--muted)}
 .refs p{margin:4px 0;padding-left:22px;text-indent:-22px}
-.next{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:22px}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
 .soon{border:2px dashed #c3d4e8;border-radius:16px;padding:18px;text-align:center;color:var(--muted);font-weight:600;background:rgba(255,255,255,.6)}
 .soon b{display:block;color:var(--navy)}
 /* contact */
@@ -180,8 +180,27 @@ footer{background:#021b3a;color:#8fb3da;text-align:center;font-size:13px;padding
 <p>Salesforce. (2023, March 7). <i>Salesforce announces Einstein GPT, the world's first generative AI for CRM</i> [Press release].</p>
 <p>The full reference list is on the timeline itself.</p></div>
 </article>
+<article class="art" style="margin-top:26px">
+<div class="art-head"><span class="tag">ARTIFACT 2 · AIML-500 WORKSHOP 1 AI LAB</span>
+<h3>Agentforce Readiness Coach: A Chatbot That Checks Whether a Sales Team Is Ready for Its First AI Agent</h3>
+<p>A working chatbot I designed with design thinking and built in Mizou. It interviews a Salesforce admin or sales leader with 8 questions about their data, process and people. It scores each one Green, Yellow or Red, then ends with a verdict and the one thing to fix before building an Agentforce agent.</p></div>
+<div class="art-body">
+<div><div class="fig"><img src="coach-results.jpg" alt="Readiness Coach results table scoring eight checks Green, Yellow or Red with a Fix first verdict"></div>
+<div class="fig" style="margin-top:12px"><img src="coach-retest.jpg" alt="Version 2 retest where the coach asks a follow-up question after a vague answer and declines to recommend a paid app"></div>
+<div class="fig-actions"><a class="btn s" href="https://mizou.com/login-thread?ID=E3v9YlM_nLLk9UfDr7m794IQJkaV-tdMwYPv9gb3REc-154086" target="_blank" rel="noopener">Try the coach</a></div></div>
+<div class="meta">
+<div class="m"><h4>Description</h4><p>The coach asks one question at a time across 8 checks: duplicate accounts, key opportunity fields, free-text consistency, a defined use case, stage rules, security and sharing, rep input and ownership of wrong answers. It follows up on vague answers, refuses to push products, never repeats personal data. It ends with a results table plus a verdict: Ready to pilot, Pilot with guardrails or Fix first.</p></div>
+<div class="m"><h4>Objective</h4><p>Teams are being asked to launch AI agents on data that was built for human reps. I wanted a five-minute way for a sales ops leader to see which gaps matter and what to fix first, before an agent starts giving wrong answers and reps stop trusting it.</p></div>
+<div class="m"><h4>Process</h4><p>I followed design thinking. Empathize: defined the user (a sales ops manager under pressure to pilot an agent). Define: wrote one problem statement. Ideate: compared a static checklist, a chatbot and an org-scanning agent, then chose the chatbot. Prototype: wrote the instructions and rules within Mizou's 1,000-character limit. Test: ran 7 scenarios. Version 1 failed 2 tests (it scored vague answers without asking and hinted at buying a trial product). I rewrote the rules and version 2 passed both on retest.</p></div>
+<div class="m"><h4>Tools &amp; technologies</h4><p>Mizou (chatbot builder); ChatGPT and a custom GPT (Salesforce Sidekick) to research common readiness gaps; STORM (Stanford) for a background article on CRM data quality for AI; Claude (Anthropic) to help draft instructions and run the browser tests while I directed the design.</p></div>
+<div class="vpbox"><h4>Value proposition</h4><p><b>Unique value:</b> Most AI-readiness checklists are generic. This one is built from the Salesforce problems I fix every day (duplicates, stale close dates, sharing rules) and it pushes back on vague answers the way a good consultant would.</p><p style="margin:0"><b>Relevance:</b> Any Salesforce admin or sales leader planning an Agentforce pilot can use it in five minutes to find their biggest gap and walk into the kickoff meeting with a fix-first plan.</p></div>
+</div></div>
+<div class="refs"><p><b>Key references</b></p>
+<p>Mizou. (2026). <i>Mizou: AI chatbot for education</i> [AI chatbot builder]. https://mizou.com/education</p>
+<p>Shao, Y., Jiang, Y., Kanell, T. A., Xu, P., Khattab, O., &amp; Lam, M. S. (2024). Assisting in writing Wikipedia-like articles from scratch with large language models. <i>arXiv</i>. https://arxiv.org/abs/2402.14207</p>
+<p>Lessons learned and test results are documented in my AI Lab report. One known limit: the coach sometimes miscounts its own Yellow scores, so a person should check the verdict.</p></div>
+</article>
 <div class="next">
-<div class="soon"><b>Artifact 2</b>Coming in Workshop 2</div>
 <div class="soon"><b>Artifact 3</b>Coming in Workshop 3</div>
 <div class="soon"><b>Artifact 4</b>Coming in Workshop 4</div>
 <div class="soon"><b>Artifact 5</b>Coming in Workshop 6</div>
