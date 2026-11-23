@@ -200,8 +200,26 @@ footer{background:#021b3a;color:#8fb3da;text-align:center;font-size:13px;padding
 <p>Shao, Y., Jiang, Y., Kanell, T. A., Xu, P., Khattab, O., &amp; Lam, M. S. (2024). Assisting in writing Wikipedia-like articles from scratch with large language models. <i>arXiv</i>. https://arxiv.org/abs/2402.14207</p>
 <p>Lessons learned and test results are documented in my AI Lab report. One known limit: the coach sometimes miscounts its own Yellow scores, so a person should check the verdict.</p></div>
 </article>
-<div class="next">
-<div class="soon"><b>Artifact 3</b>Coming in Workshop 3</div>
+<article class="art" style="margin-top:26px">
+<div class="art-head"><span class="tag">ARTIFACT 3 · AIML-500 WORKSHOP 2</span>
+<h3>Machine Learning or Deep Learning? A Four-Question Decision Guide for CRM Teams</h3>
+<p>A one-page guide, backed by a full research report, that helps a business team decide when a simple machine learning model is enough and when deep learning is worth the cost. It compares two real Salesforce problems side by side.</p></div>
+<div class="art-body">
+<div><div class="fig"><a href="mldl-guide.jpg" target="_blank"><img src="mldl-guide.jpg" alt="Decision guide comparing churn prediction (machine learning) with Agentforce language understanding (deep learning) across four questions: data type, known features, data and compute needs and trust"></a></div>
+<div class="fig-actions"><a class="btn s" href="mldl-guide.jpg" target="_blank">Open full size</a><a class="btn o" href="mldl-report.pdf" target="_blank">Read the full report (PDF)</a></div></div>
+<div class="meta">
+<div class="m"><h4>Description</h4><p>The guide asks four questions: what the data looks like, whether we already know the features, how much data and computing power the problem needs and who has to trust the answer. Customer churn prediction lands on machine learning because the signals already sit in clean CRM fields. Understanding reps' plain-English questions in an Agentforce agent lands on deep learning because language has to be learned, not listed.</p></div>
+<div class="m"><h4>Objective</h4><p>Business teams often assume the newest, most complex AI is the best choice. I wanted a quick tool a sales ops leader or Salesforce admin can use to match the model to the data, so budget and trust go where they actually pay off.</p></div>
+<div class="m"><h4>Process</h4><p>I started from the course lesson on machine learning vs. deep learning and chose a machine learning case and a deep learning case from my own Salesforce work. I checked the churn example against a published telecom study where XGBoost beat the other models. I also checked it against a 45-dataset benchmark showing tree models still beat deep networks on tabular data. For the deep learning side I read how the Atlas reasoning engine uses a large language model and retrieval inside Agentforce. I wrote a 6-page report first, then cut it down to the four questions a manager would actually ask and designed the one-page version.</p></div>
+<div class="m"><h4>Tools &amp; technologies</h4><p>Peer-reviewed sources and Salesforce documentation; Microsoft Word for the report; HTML/CSS rendered to an image for the guide; Claude (Anthropic) to help find and check sources, edit my drafts and build the layout. I chose the examples and made the final calls on what to include.</p></div>
+<div class="vpbox"><h4>Value proposition</h4><p><b>Unique value:</b> Most ML vs. DL explainers use textbook examples like cat photos. This one uses the two problems Salesforce teams actually bring to an admin: "who's going to churn?" and "can the agent understand my reps?"</p><p style="margin:0"><b>Relevance:</b> Before an Agentforce or Einstein project, a product owner can use the four questions to set expectations, pick the simpler option when it's enough and explain the choice to leadership in plain language.</p></div>
+</div></div>
+<div class="refs"><p><b>Key references</b></p>
+<p>Ahmad, A. K., Jafar, A., &amp; Aljoumaa, K. (2019). Customer churn prediction in telecom using machine learning in big data platform. <i>Journal of Big Data, 6</i>(1), Article 28. https://doi.org/10.1186/s40537-019-0191-6</p>
+<p>Grinsztajn, L., Oyallon, E., &amp; Varoquaux, G. (2022). Why do tree-based models still outperform deep learning on typical tabular data? <i>Advances in Neural Information Processing Systems, 35</i>, 507–520.</p>
+<p>Gupta, S. (2024, October 25). <i>How the Atlas reasoning engine powers Agentforce</i>. Salesforce. https://www.salesforce.com/agentforce/what-is-a-reasoning-engine/atlas/</p></div>
+</article>
+<div class="next" style="grid-template-columns:1fr 1fr">
 <div class="soon"><b>Artifact 4</b>Coming in Workshop 4</div>
 <div class="soon"><b>Artifact 5</b>Coming in Workshop 6</div>
 </div>
